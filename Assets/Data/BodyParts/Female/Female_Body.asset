@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b5eb7dc8f37574f888df34880e9fbb, type: 3}
-  m_Name: BodyPartData
+  m_Name: Female_Body
   m_EditorClassIdentifier: 
-  isMale: 1
-  animatorController: {fileID: 0}
+  isMale: 0
+  animatorController: {fileID: 22100000, guid: c67692374f83d83419a9ba706947d7b6, type: 2}

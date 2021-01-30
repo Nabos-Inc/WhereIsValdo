@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b5eb7dc8f37574f888df34880e9fbb, type: 3}
   m_Name: Female_Shirt_Basic
   m_EditorClassIdentifier: 
-  isMale: 1
-  animatorController: {fileID: 0}
+  isMale: 0
+  animatorController: {fileID: 22100000, guid: cd3b6d76bba0038478ce1f53dfff65df, type: 2}

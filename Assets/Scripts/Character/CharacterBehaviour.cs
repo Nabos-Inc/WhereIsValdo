@@ -18,7 +18,7 @@ public class CharacterBehaviour : MonoBehaviour {
         layeredCharacterAnimator = GetComponent<LayeredCharacterAnimator>();
     }
 
-    private void Start() {
+    public void RandomizeAppearance() {
         layeredCharacterAnimator.Randomize(isMale, appearanceConfig);
     }
 

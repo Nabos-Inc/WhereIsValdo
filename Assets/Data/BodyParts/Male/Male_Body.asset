@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Male_Body
   m_EditorClassIdentifier: 
   isMale: 1
-  animatorController: {fileID: 0}
+  animatorController: {fileID: 9100000, guid: 16c2b49a29eb9e14b851ed092e44b06b, type: 2}

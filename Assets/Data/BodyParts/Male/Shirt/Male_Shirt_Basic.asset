@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Male_Shirt_Basic
   m_EditorClassIdentifier: 
   isMale: 1
-  animatorController: {fileID: 0}
+  animatorController: {fileID: 22100000, guid: ad4397864befb56408a005c94c96e870, type: 2}
