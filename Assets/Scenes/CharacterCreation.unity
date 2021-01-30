@@ -131,13 +131,15 @@ GameObject:
   m_Component:
   - component: {fileID: 545016545}
   - component: {fileID: 545016546}
+  - component: {fileID: 545016548}
+  - component: {fileID: 545016547}
   m_Layer: 0
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &545016545
 Transform:
   m_ObjectHideFlags: 0
@@ -203,6 +205,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &545016547
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545016544}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e3f394c1d6ec0842978a28f3983fa6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &545016548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545016544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleMaleParts:
+  - {fileID: 22100000, guid: 102e202ddfdac9840abbab23dcaddfd0, type: 2}
+  possibleFemaleParts:
+  - {fileID: 22100000, guid: 2109f35df97a88c46b44d7d6f21496aa, type: 2}
+  possibleColors:
+  - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
+  - {r: 0.013375282, g: 0, b: 1, a: 1}
+  - {r: 0.09620416, g: 1, b: 0, a: 1}
+  - {r: 0.990566, g: 0.06074228, b: 0.90212876, a: 1}
 --- !u!1 &766083560
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +809,7 @@ MonoBehaviour:
   - {fileID: 766083562}
   - {fileID: 1777820412}
   - {fileID: 870038299}
+  - {fileID: 545016547}
 --- !u!1 &1777820409
 GameObject:
   m_ObjectHideFlags: 0
