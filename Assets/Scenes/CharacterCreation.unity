@@ -236,10 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleMaleParts:
-  - {fileID: 22100000, guid: 102e202ddfdac9840abbab23dcaddfd0, type: 2}
-  possibleFemaleParts:
-  - {fileID: 22100000, guid: 2109f35df97a88c46b44d7d6f21496aa, type: 2}
+  possibleParts: []
   possibleColors:
   - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   - {r: 0.013375282, g: 0, b: 1, a: 1}
@@ -360,14 +357,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleMaleParts:
-  - {fileID: 9100000, guid: 16c2b49a29eb9e14b851ed092e44b06b, type: 2}
-  possibleFemaleParts:
-  - {fileID: 22100000, guid: c67692374f83d83419a9ba706947d7b6, type: 2}
+  possibleParts: []
   possibleColors:
   - {r: 0.8679245, g: 0.5322895, b: 0.50356, a: 1}
   - {r: 0.26415092, g: 0.12833749, b: 0.12833749, a: 0.98039216}
   - {r: 0.6226415, g: 0.56093174, b: 0.3729975, a: 1}
+  - {r: 0.1792453, g: 0.17396094, b: 0.15810788, a: 1}
 --- !u!1 &870038296
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,10 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleMaleParts:
-  - {fileID: 22100000, guid: 4ae68c06d9601af4fbdf61bfb6dfd970, type: 2}
-  possibleFemaleParts:
-  - {fileID: 22100000, guid: fdf56bec6d9f58143935c61c4b418fec, type: 2}
+  possibleParts: []
   possibleColors:
   - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   - {r: 0.013375282, g: 0, b: 1, a: 1}
@@ -793,6 +785,24 @@ MonoBehaviour:
   speed: 0
   dirX: 0
   dirY: 0
+  randomize: 0
+  staticAppearance:
+    body:
+      animatorController: {fileID: 9100000, guid: 16c2b49a29eb9e14b851ed092e44b06b,
+        type: 2}
+      color: {r: 0.9716981, g: 0.66460484, b: 0.66460484, a: 1}
+    pants:
+      animatorController: {fileID: 22100000, guid: 4ae68c06d9601af4fbdf61bfb6dfd970,
+        type: 2}
+      color: {r: 0.069517374, g: 1, b: 0, a: 1}
+    shirt:
+      animatorController: {fileID: 22100000, guid: ad4397864befb56408a005c94c96e870,
+        type: 2}
+      color: {r: 1, g: 0, b: 0, a: 1}
+    hair:
+      animatorController: {fileID: 22100000, guid: 102e202ddfdac9840abbab23dcaddfd0,
+        type: 2}
+      color: {r: 0.122641504, g: 0.09660911, b: 0.09660911, a: 1}
 --- !u!114 &1600417246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,11 +815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38cd15dd1d210e499d3259b159d3d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animators:
-  - {fileID: 766083562}
-  - {fileID: 1777820412}
-  - {fileID: 870038299}
-  - {fileID: 545016547}
+  body: {fileID: 766083562}
+  shirt: {fileID: 1777820412}
+  pants: {fileID: 870038299}
+  hair: {fileID: 545016547}
 --- !u!1 &1777820409
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,10 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleMaleParts:
-  - {fileID: 22100000, guid: ad4397864befb56408a005c94c96e870, type: 2}
-  possibleFemaleParts:
-  - {fileID: 22100000, guid: cd3b6d76bba0038478ce1f53dfff65df, type: 2}
+  possibleParts: []
   possibleColors:
   - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   - {r: 0.013375282, g: 0, b: 1, a: 1}

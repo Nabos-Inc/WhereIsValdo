@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour {
+    [Header("Animation")]
     public float speed = 0f;
     public float dirX = 0f;
     public float dirY = 0f;
+
+    [Header("Randomization")]
+    public bool isMale = true;
+    public CharacterAppearanceConfig appearanceConfig;
 
     private LayeredCharacterAnimator layeredCharacterAnimator;
 
@@ -14,7 +19,7 @@ public class CharacterBehaviour : MonoBehaviour {
     }
 
     private void Start() {
-        layeredCharacterAnimator.Randomize();
+        layeredCharacterAnimator.Randomize(isMale, appearanceConfig);
     }
 
     private void Update() {
