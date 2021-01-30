@@ -13,6 +13,10 @@ public class CharacterBehaviour : MonoBehaviour {
         layeredCharacterAnimator = GetComponent<LayeredCharacterAnimator>();
     }
 
+    private void Start() {
+        layeredCharacterAnimator.Randomize();
+    }
+
     private void Update() {
         layeredCharacterAnimator.SetFloat("Speed", speed);
         layeredCharacterAnimator.SetFloat("DirX", dirX);

@@ -10,4 +10,13 @@ public class LayeredCharacterAnimator : MonoBehaviour {
             anim.SetFloat(name, value);
         }
     }
+
+    public void Randomize() {
+        bool isMale = Random.value > 0.5f;
+        foreach(Animator anim in animators) {
+            var characterPart = anim.GetComponent<ColorizedCharacterPart>();
+            characterPart.RandomizePart(isMale);
+            characterPart.RandomizeColor();
+        }
+    }
 }

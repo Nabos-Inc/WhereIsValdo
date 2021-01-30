@@ -191,7 +191,7 @@ SpriteRenderer:
   m_SortingLayerID: 1046773055
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 6758731727780753620, guid: e371ef71fecadc448a04cb764646d286,
+  m_Sprite: {fileID: 7065053293778045612, guid: db42748610d0b7d458d0e6bb447f797d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 766083561}
   - component: {fileID: 766083563}
   - component: {fileID: 766083562}
+  - component: {fileID: 766083564}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -228,7 +229,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766083560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -293,7 +294,7 @@ SpriteRenderer:
   m_SortingLayerID: 1046773055
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5431750748831824099, guid: e118050360d96164dadc38e91bd2058e,
+  m_Sprite: {fileID: 5093230616762371765, guid: 2ba8502b512c4384fbfea8d00034839f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -305,6 +306,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &766083564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766083560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleMaleParts:
+  - {fileID: 9100000, guid: 16c2b49a29eb9e14b851ed092e44b06b, type: 2}
+  possibleFemaleParts:
+  - {fileID: 22100000, guid: c67692374f83d83419a9ba706947d7b6, type: 2}
+  possibleColors:
+  - {r: 0.8679245, g: 0.5322895, b: 0.50356, a: 1}
+  - {r: 0.26415092, g: 0.12833749, b: 0.12833749, a: 0.98039216}
+  - {r: 0.6226415, g: 0.56093174, b: 0.3729975, a: 1}
 --- !u!1 &870038296
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,13 +336,15 @@ GameObject:
   m_Component:
   - component: {fileID: 870038297}
   - component: {fileID: 870038298}
+  - component: {fileID: 870038299}
+  - component: {fileID: 870038300}
   m_Layer: 0
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &870038297
 Transform:
   m_ObjectHideFlags: 0
@@ -375,7 +398,7 @@ SpriteRenderer:
   m_SortingLayerID: 1046773055
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7449504662997819837, guid: 9b4f1cb85ebb431479953f4d1344543a,
+  m_Sprite: {fileID: 6580108800778509843, guid: a92616a4cfd1b5044a993cd3c705290b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -387,6 +410,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &870038299
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870038296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 4ae68c06d9601af4fbdf61bfb6dfd970, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &870038300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870038296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleMaleParts:
+  - {fileID: 22100000, guid: 4ae68c06d9601af4fbdf61bfb6dfd970, type: 2}
+  possibleFemaleParts:
+  - {fileID: 22100000, guid: fdf56bec6d9f58143935c61c4b418fec, type: 2}
+  possibleColors:
+  - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
+  - {r: 0.013375282, g: 0, b: 1, a: 1}
+  - {r: 0.09620416, g: 1, b: 0, a: 1}
+  - {r: 0.990566, g: 0.06074228, b: 0.90212876, a: 1}
 --- !u!1 &970335230
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +766,7 @@ MonoBehaviour:
   animators:
   - {fileID: 766083562}
   - {fileID: 1777820412}
+  - {fileID: 870038299}
 --- !u!1 &1777820409
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +778,7 @@ GameObject:
   - component: {fileID: 1777820410}
   - component: {fileID: 1777820411}
   - component: {fileID: 1777820412}
+  - component: {fileID: 1777820413}
   m_Layer: 0
   m_Name: Shirt
   m_TagString: Untagged
@@ -774,7 +839,7 @@ SpriteRenderer:
   m_SortingLayerID: 1046773055
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2507666223909099643, guid: 112fc520403f8bb4e8f730986a2ea780,
+  m_Sprite: {fileID: -3419655844087281519, guid: b1064c7c371e20840b9d2d864573dcbf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -805,6 +870,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1777820413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777820409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e7953c8888c6641b8d3e9e7ebd4ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleMaleParts:
+  - {fileID: 22100000, guid: ad4397864befb56408a005c94c96e870, type: 2}
+  possibleFemaleParts:
+  - {fileID: 22100000, guid: cd3b6d76bba0038478ce1f53dfff65df, type: 2}
+  possibleColors:
+  - {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
+  - {r: 0.013375282, g: 0, b: 1, a: 1}
+  - {r: 0.09620416, g: 1, b: 0, a: 1}
+  - {r: 0.990566, g: 0.06074228, b: 0.90212876, a: 1}
 --- !u!1 &2060497858
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +961,7 @@ SpriteRenderer:
   m_SortingLayerID: 1046773055
   m_SortingLayer: 1
   m_SortingOrder: 4
-  m_Sprite: {fileID: -5788867636021948128, guid: 781c723281f39db42be8f92d574cff0b,
+  m_Sprite: {fileID: -8814959701339202634, guid: c4b082b048f949c458615cfbe2b9c624,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
