@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-<<<<<<< HEAD
 public class Level : MonoBehaviour {
     [Header("Level Data")]
     public LevelData levelData;
