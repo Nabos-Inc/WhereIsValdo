@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
 public class Level : MonoBehaviour {
     [Header("Level Data")]
     public LevelData levelData;
@@ -17,6 +18,7 @@ public class Level : MonoBehaviour {
     private bool fading = false;
 
     public PolygonCollider2D cameraCollider;
+    public int numOfCharacters;
 
     private IEnumerator Start() {
         GameManager.Instance.SetLevel(this);
