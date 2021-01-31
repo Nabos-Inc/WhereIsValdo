@@ -8,4 +8,8 @@ public class VictoryScreen : MonoBehaviour {
     private void Start() {
         GameManager.Instance.ChangeBGM(bgm);
     }
+
+    public void QuitGame() {
+        Application.Quit();
+    }
 }
