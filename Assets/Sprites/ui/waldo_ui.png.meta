@@ -35,6 +35,9 @@ TextureImporter:
   - first:
       213: -5180359155161293162
     second: dialogueBox_Right
+  - first:
+      213: 1111835707790519621
+    second: mainMenu_Button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -317,7 +320,7 @@ TextureImporter:
         width: 17
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +341,7 @@ TextureImporter:
         width: 13
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,6 +349,27 @@ TextureImporter:
       bones: []
       spriteID: 69e1bab8bcaab18b0800000000000000
       internalID: -5180359155161293162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainMenu_Button
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1088
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54de27b7fa80e6f00800000000000000
+      internalID: 1111835707790519621
       vertices: []
       indices: 
       edges: []

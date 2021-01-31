@@ -31,7 +31,11 @@ public class Level : MonoBehaviour
 
   public void FadeOutToNextLevel()
   {
-    if (!fading) StartCoroutine(FadeOutCo());
+    if (!fading)
+    {
+      GameManager.Instance.ChangeBGM(null);
+      StartCoroutine(FadeOutCo());
+    }
   }
 
   private IEnumerator FadeOutCo()

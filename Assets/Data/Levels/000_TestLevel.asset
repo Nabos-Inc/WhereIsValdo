@@ -26,3 +26,4 @@ MonoBehaviour:
   targetPants: {fileID: 0}
   targetPantsColor: {r: 0, g: 0, b: 0, a: 0}
   waldorfText: Find a person with a red shirt!
+  bgm: {fileID: 8300000, guid: da5ce8d2cc31f7740b424123c5f00abf, type: 3}

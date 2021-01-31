@@ -17,11 +17,14 @@ public class GameManager : MonoBehaviour {
     private LevelData levelData;
     private Level currentLevel;
     private CharacterBehaviour lastClickedCharacter;
+    private AudioSource audioSource;
 
     private void Awake() {
         if (_instance == null) {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+
+            audioSource = GetComponent<AudioSource>();
         } else {
             Destroy(gameObject);
         }
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour {
 
     public void Init() {
         lastClickedCharacter = null;
+        ChangeBGM(levelData.bgm);
 
         var filter = new CharacterBodyFilter();
         if(levelData.isBodyTargeted) {
@@ -85,5 +89,17 @@ public class GameManager : MonoBehaviour {
         levelNames.RemoveAt(0);
 
         SceneManager.LoadScene(nextLevelName);
+    }
+
+    public void ChangeBGM(AudioClip bgm) {
+        audioSource.Stop();
+        if (bgm != null) {
+            audioSource.clip = bgm;
+            audioSource.Play();
+        }
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 }
