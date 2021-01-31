@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour {
     private static GameManager _instance;
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour {
     }
     public CharacterSpawner characterSpawner;
     public List<string> levelNames;
+    public CinemachineConfiner confiner;
 
     private LevelData levelData;
     private Level currentLevel;
@@ -51,12 +53,18 @@ public class GameManager : MonoBehaviour {
         characterSpawner.SpawnCharacters();
     }
 
+    public void SetCameraCollider(PolygonCollider2D collider) {
+        confiner.m_BoundingShape2D = collider;
+    }
+
     public void SetLevel(Level level) {
         currentLevel = level;
         levelData = level.levelData;
         characterSpawner.characterParent = level.characterParent;
         characterSpawner.spawnPointParent = level.spawnPointParent;
         characterSpawner.targetIsMale = level.levelData.isMale;
+        
+        SetCameraCollider(level.cameraCollider);
     }
 
     public void OnCharacterClicked(CharacterBehaviour character) {
