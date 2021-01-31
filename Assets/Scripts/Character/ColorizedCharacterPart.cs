@@ -12,13 +12,16 @@ public class ColorizedCharacterPart: MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-    public void RandomizeColor(List<Color> possibleColors) {
+    public Color RandomizeColor(List<Color> possibleColors) {
         spriteRenderer.color = possibleColors[Random.Range(0, possibleColors.Count)];
+        return spriteRenderer.color;
     }
 
-    public void RandomizePart(List<BodyPartData> possibleParts, bool isMale) {
+    public BodyPartData RandomizePart(List<BodyPartData> possibleParts, bool isMale) {
         List<BodyPartData> legalParts = possibleParts.Where(x => x.isMale == isMale).ToList();
-        animator.runtimeAnimatorController = legalParts[Random.Range(0, legalParts.Count)].animatorController;
+        var data = legalParts[Random.Range(0, legalParts.Count)];
+        animator.runtimeAnimatorController = data.animatorController;
+        return data;
     }
 
     public void SetPart(BodyPartData config) {

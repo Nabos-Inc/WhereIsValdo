@@ -15,20 +15,30 @@ public class LayeredCharacterAnimator : MonoBehaviour {
         hair.SetFloat(name, value);
     }
 
-    public void Randomize(bool isMale, CharacterAppearanceConfig config) {
-        var gender = config.randomizeGender ? isMale : Random.value > 0.5f;
+    public CharacterAppearanceData Randomize(bool isMale, CharacterAppearanceConfig config) {
+        CharacterAppearanceData res = new CharacterAppearanceData();
+
+        var gender = config.randomizeGender ? Random.value > 0.5f : isMale;
+        res.isMale = gender;
+
         var bodyPart = body.GetComponent<ColorizedCharacterPart>();
         bodyPart.SetPart(gender ? config.maleBody : config.femaleBody);
         bodyPart.RandomizeColor(config.possibleSkinColors);
 
-        RandomizePart(config.shirt, shirt, gender);
-        RandomizePart(config.pants, pants, gender);
-        RandomizePart(config.hair, hair, gender);
+        res.shirt = RandomizePart(config.shirt, shirt, gender);
+        res.pants = RandomizePart(config.pants, pants, gender);
+        res.hair = RandomizePart(config.hair, hair, gender);
+
+        return res;
     }
 
-    private void RandomizePart(BodyPartConfig config, Animator anim, bool isMale) {
+    private BodyPartAppearanceData RandomizePart(BodyPartConfig config, Animator anim, bool isMale) {
+        BodyPartAppearanceData data = new BodyPartAppearanceData();
+
         var characterPart = anim.GetComponent<ColorizedCharacterPart>();
-        characterPart.RandomizePart(config.possibleParts, isMale);
-        characterPart.RandomizeColor(config.possibleColors);
+        data.bodyPartData = characterPart.RandomizePart(config.possibleParts, isMale);
+        data.color = characterPart.RandomizeColor(config.possibleColors);
+
+        return data;
     }
 }
