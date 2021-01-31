@@ -18,14 +18,14 @@ public class Level : MonoBehaviour {
 
     public PolygonCollider2D cameraCollider;
 
-    private IEnumerator Start()
-    {
-    GameManager.Instance.SetLevel(this);
-    GameManager.Instance.Init();
+    private IEnumerator Start() {
+        GameManager.Instance.SetLevel(this);
+        GameManager.Instance.Init();
 
-    waldorfText.text = levelData.waldorfText;
-    yield return new WaitForSeconds(3f);
-    waldorfGameObject.SetActive(false);
+        waldorfText.text = levelData.waldorfText;
+        yield return new WaitForSeconds(3f);
+        waldorfGameObject.SetActive(false);
+        GameManager.Instance.cameraMove.moveEnabled = true;
     }
 
     public void FadeOutToNextLevel(AudioClip winClip) {

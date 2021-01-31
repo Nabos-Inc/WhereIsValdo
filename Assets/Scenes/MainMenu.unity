@@ -265,6 +265,11 @@ PrefabInstance:
       objectReference: {fileID: 296669003}
     - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
         type: 3}
+      propertyPath: cameraMove
+      value: 
+      objectReference: {fileID: 668843825}
+    - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
+        type: 3}
       propertyPath: winLevelClip
       value: 
       objectReference: {fileID: 8300000, guid: f624bfbcbfec6dd41a6c09bfcb69b3ec, type: 3}
@@ -479,6 +484,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2032861065535018752, guid: 417e376899678a94f8bcaf1218b55b46,
+        type: 3}
+      propertyPath: deadzoneX
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032861065535018752, guid: 417e376899678a94f8bcaf1218b55b46,
+        type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 647455896}
     - target: {fileID: 2916450958704793330, guid: 417e376899678a94f8bcaf1218b55b46,
         type: 3}
       propertyPath: m_Name
@@ -1028,6 +1043,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 296669002}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &668843825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2032861065535018752, guid: 417e376899678a94f8bcaf1218b55b46,
+    type: 3}
+  m_PrefabInstance: {fileID: 296669002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd11be36f93cd4f4ca131e3e4a8a04c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &724874740
 GameObject:
   m_ObjectHideFlags: 0

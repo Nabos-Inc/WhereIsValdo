@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public CharacterSpawner characterSpawner;
     public List<string> levelNames;
     public CinemachineConfiner confiner;
+    public CameraMove cameraMove;
 
     [Header("Audio")]
     public AudioClip wrongPersonClip;
@@ -63,6 +64,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SetCameraCollider(PolygonCollider2D collider) {
+        cameraMove.polCollider = collider;
         confiner.m_BoundingShape2D = collider;
     }
 
@@ -98,6 +100,7 @@ public class GameManager : MonoBehaviour {
         string nextLevelName = levelNames[0];
         levelNames.RemoveAt(0);
 
+        cameraMove.moveEnabled = false;
         SceneManager.LoadScene(nextLevelName);
     }
 
