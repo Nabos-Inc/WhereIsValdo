@@ -50,7 +50,8 @@ public class CharacterSpawner : MonoBehaviour {
         var desired = center + offset;
 
         NavMeshHit hit;
-        NavMesh.SamplePosition(desired, out hit, 1.0f, 1 << NavMesh.GetAreaFromName("Walkable"));
+        var found = NavMesh.SamplePosition(desired, out hit, 1.0f, 1 << NavMesh.GetAreaFromName("Walkable"));
+        if (!found) return GenerateRandomSpawn(center);
 
         return hit.position;
     }
