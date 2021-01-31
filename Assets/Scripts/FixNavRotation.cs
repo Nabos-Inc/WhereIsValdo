@@ -5,7 +5,7 @@ public class FixNavRotation : MonoBehaviour
 {
   // Start is called before the first frame update
 
-  void Start()
+  void Awake()
   {
     var agent = GetComponent<NavMeshAgent>();
     agent.updateRotation = false;
