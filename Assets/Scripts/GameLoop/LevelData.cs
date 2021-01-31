@@ -28,6 +28,9 @@ public class LevelData : ScriptableObject {
     [Header("Waldorf")]
     public string waldorfText;
 
+    [Header("Audio")]
+    public AudioClip bgm;
+
     public bool IsTarget(CharacterAppearanceData data) {
         if (isBodyTargeted && targetBody.isMale != data.isMale) return false;
         if (isHairTargeted && !IsTargetPart(data.hair, targetHair, targetHairColor)) return false;
