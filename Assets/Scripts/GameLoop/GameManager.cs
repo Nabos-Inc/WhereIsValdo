@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
             filter.pantsFilter.colorBlackList.Add(levelData.targetPantsColor);
         }
         characterSpawner.filter = filter;
-        characterSpawner.SpawnCharacters();
+        characterSpawner.SpawnCharacters(currentLevel.numOfCharacters);
     }
 
     public void SetCameraCollider(PolygonCollider2D collider) {

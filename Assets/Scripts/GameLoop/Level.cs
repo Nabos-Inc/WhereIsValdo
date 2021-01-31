@@ -19,6 +19,8 @@ public class Level : MonoBehaviour
 
   public PolygonCollider2D cameraCollider;
 
+  public int numOfCharacters;
+
   private IEnumerator Start()
   {
     GameManager.Instance.SetLevel(this);
