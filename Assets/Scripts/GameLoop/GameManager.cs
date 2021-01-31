@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour {
     public List<string> levelNames;
     public CinemachineConfiner confiner;
 
+    [Header("Audio")]
+    public AudioClip wrongPersonClip;
+    public AudioClip rightPersonClip;
+    public AudioClip winLevelClip;
+
     private LevelData levelData;
     private Level currentLevel;
     private CharacterBehaviour lastClickedCharacter;
@@ -80,7 +85,12 @@ public class GameManager : MonoBehaviour {
         character.speechBubbleObject.SetActive(true);
         character.speechBubbleText.text = result;
 
-        if (correct) currentLevel.FadeOutToNextLevel();
+        if (correct) {
+            PlaySFX(rightPersonClip);
+            currentLevel.FadeOutToNextLevel(winLevelClip);
+        } else {
+            PlaySFX(wrongPersonClip);
+        }
     }
 
     public void NextLevel() {
@@ -97,6 +107,10 @@ public class GameManager : MonoBehaviour {
             audioSource.clip = bgm;
             audioSource.Play();
         }
+    }
+
+    public void PlaySFX(AudioClip sfx) {
+        audioSource.PlayOneShot(sfx, 5);
     }
 
     public void ExitGame() {

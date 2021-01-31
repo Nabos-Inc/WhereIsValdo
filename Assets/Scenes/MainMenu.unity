@@ -265,6 +265,21 @@ PrefabInstance:
       objectReference: {fileID: 296669003}
     - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
         type: 3}
+      propertyPath: winLevelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f624bfbcbfec6dd41a6c09bfcb69b3ec, type: 3}
+    - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
+        type: 3}
+      propertyPath: rightPersonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 987f3f8eab7674848ba11e6e29ae0fa3, type: 3}
+    - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
+        type: 3}
+      propertyPath: wrongPersonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ade26ef3affdc0e48a0b9cbe727789fe, type: 3}
+    - target: {fileID: 5874754447789690823, guid: ff272556d3b5f58498c7117962711393,
+        type: 3}
       propertyPath: levelNames.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -920,6 +935,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184580586}
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &635078345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,7 +1419,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 863516794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 178025639}
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1184580586}
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &863516794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,6 +2058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsCanvas: {fileID: 2032890620}
+  clickClip: {fileID: 8300000, guid: b49463602cceb5342ac14b891577e82d, type: 3}
 --- !u!4 &1184580587
 Transform:
   m_ObjectHideFlags: 0
@@ -2405,7 +2454,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 84db290f369ca4a4b92619608be77de2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

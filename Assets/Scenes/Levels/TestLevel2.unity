@@ -6735,6 +6735,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4556289273509173883, guid: a661a4e326af650439f505ddd5194925,
+        type: 3}
+      propertyPath: m_Text
+      value: Time to find some people! dfdd fdf df df df df df df df df df d fd f
+        df df df df df d fd fd f d f df df df
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556289273509173883, guid: a661a4e326af650439f505ddd5194925,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5127489693703734662, guid: a661a4e326af650439f505ddd5194925,
         type: 3}
       propertyPath: m_Color.a
