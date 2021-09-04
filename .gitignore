@@ -60,6 +60,9 @@ crashlytics-build.properties
 
 ### Custom
 
+/.firebase/
+/public/
+
 # BOLT
 
 # Always exclude these files, because they are part of the plugin
